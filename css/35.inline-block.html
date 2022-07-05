@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            background-color: thistle;
+            font-size: 0;
+            line-height: 0;
+            /* font-size: 0; 因位子層下display: inline-block; 會有4px的空格
+                將文字大小先歸零 */
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: antiquewhite;
+            display: inline-block;
+            /* 將div區塊元素改成 */
+            font-size: 1rem;
+            /* font-size: 1rem; 在重新下文字的大小 */
+            vertical-align: top;
+        }
+        img{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box"><img src="images/nook_small.jpg" alt=""></div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+    </div>
+</body>
+</html>

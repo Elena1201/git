@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grayscale{
+            filter: grayscale(0.7);
+        }
+        .sepia{
+            filter: sepia(1);
+        }
+        .saturate{
+            filter: saturate(0.1);
+        }
+        .Hue-rotate{
+            filter: hue-rotate(180deg);
+        }
+        .invert{
+            filter: invert(1);
+        }
+        .brightness{
+            filter: brightness(4);
+        }
+        .blur{
+            filter: blur(10px) grayscale(0.7);
+        }
+        .drop-shadow{
+            filter: drop-shadow(5px 5px 5px #333) ;
+        }
+        .box-shadow{
+            box-shadow: 5px 5px 5px #333;
+        }
+        .clip-path{
+            /* clip-path: circle(30%); */
+            /* clip-path: ellipse(20% 10%); */
+            /* clip-path: inset(5px 10px 20px 30px round 10% 20% 30% 50%); */
+            clip-path:polygon(0% 100%, 50% 0%,100% 100%);
+        }
+    </style>
+</head>
+<body>
+    <img class="grayscale" src="images/nook_small.jpg" alt="">
+    <img class="sepia" src="images/nook_small.jpg" alt="">
+    <img class="saturate" src="images/nook_small.jpg" alt="">
+    <img class="Hue-rotate" src="images/nook_small.jpg" alt="">
+    <img class="invert" src="images/nook_small.jpg" alt="">
+    <img class="brightness" src="images/nook_small.jpg" alt="">
+    <img class="blur" src="images/nook_small.jpg" alt="">
+    <img class="drop-shadow " src="images/heart.png" alt="">
+    <img class="box-shadow" src="images/heart.png " alt="">
+</body>
+</html>

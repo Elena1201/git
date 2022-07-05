@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: bisque;
+            border-radius: 0% 0% 100% 0%;
+        }
+        .wap{
+            position: relative;
+            margin: 50px 0;
+        }
+        .box-1{
+            width: 200px;
+            height: 200px;
+            /* background-color: rgb(217, 182, 250); */
+            border: 1px solid #000;
+            position: absolute;
+            
+        }
+        .box2{
+            border-radius: 100px 50px 40px 80px / 30px 4px 25px 65px;
+            animation: circle-loop 6s infinite;
+        }
+        .box3{
+            border-radius: 20px 80px 100px 50px / 60px 4px 65px 15px;
+            animation: circle-loop 5s infinite;
+        }
+        .box4{
+            border-radius: 100px 40px 40px 20px / 40px 70px 150px 5px;
+            animation: circle-loop 2s infinite;
+        }
+        @keyframes circle-loop{
+            from{
+                transform: rotate(0);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="wap">
+        <div class=" box-1 box2"></div>
+        <div class=" box-1 box3"></div>
+        <div class="box-1 box4"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            background-color: darkgrey;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: thistle;
+            margin: 10px;
+            float: left;
+        }
+        .clear{
+            clear: both;
+        }
+
+        .clearfix::before{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .price1{
+            font-size: 3rem;
+        }
+        .price1::before{
+            content: '$';
+            display: inline-block;
+        }
+        .price2{
+            font-size: 4rem;
+        }
+        .price2::after{
+            content: '元';
+            display: inline-block;
+        }
+
+        .onsale{
+            width: 200px;
+            height: 200px;
+            background-color: antiquewhite;
+            position: relative;
+        }
+        .onsale::after{
+            content: '';
+            width: 50px;
+            height: 25px;
+            border: 1px solid #000;
+            border-radius: 20px;
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -25px;
+            background-image: linear-gradient( orange, red);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap ">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="clear"></div>
+    </div>
+    <div class="price1">300</div>
+    <div class="price2">400</div>
+
+    <div class="onsale"></div>
+
+    <div class="wrap clearfix ">
+        <!-- ::before -->
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <!-- ::after -->
+    </div> 
+</body>
+</html>

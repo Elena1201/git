@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* position: relative; */
+        }
+        .container{
+            background-color: rgba(0, 0, 0);
+            position: relative;
+            overflow: hidden;
+        }
+        .background {
+            width: 100%;
+            height: 500px;
+            background: url('./images/Musee\ du\ Louvre.jpg') center center/ cover no-repeat;
+            opacity: 1;
+        }
+        h1{
+            width: 100%;
+            text-align: center;
+            /* position: absolute; */
+            /* bottom: 0px;
+            padding: 0 45%;
+            margin: auto; */
+            /* transform: translateX(-50%); */
+            margin: 0;
+            bottom: 0;
+            position: absolute;
+            transform: translateX(-50%);
+            color: rgb(255, 0, 0);
+            opacity: 0.3;
+            /* border: 1px solid #000; */
+            transform: translateY(40px);
+            transition: .5s;
+        }
+        
+        .container:hover .background{
+            opacity: 0.4;
+            background:linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0, 1) ) url('./images/Musee\ du\ Louvre.jpg') center center/ cover no-repeat;
+        }
+        .container:hover h1{
+            opacity: 1;
+            transform: translateY(0px);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="background"></div>
+        <h1>Paris</h1>
+    </div>
+</body>
+</html>

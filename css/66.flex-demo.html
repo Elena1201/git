@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-demo</title>
+    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        
+        }
+
+        .container{
+            width: 960px;
+            margin: auto;
+        }
+
+        .row{
+            display: flex;
+        }
+
+        .col{
+            width:calc(100% / 3);
+        }
+
+        .nav-left{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            font-size: 0;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-left a {
+            font-size: 16px;
+            text-decoration: none;
+            padding: 5px 0px;
+            margin: 0 15px;
+            color: black;
+        }
+
+        .nav-left a:nth-child(1){
+            border-bottom: 1px solid #ccc;
+        } 
+
+        .nav-middle{
+            text-align: center;
+        }
+
+        .nav-right{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+            height: 100%;
+        }
+
+        ul.links{
+            width: 100%;
+            list-style: none;
+            padding-bottom: 50px;
+            padding-left: 0;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+        }
+
+        .links a{
+            text-decoration: none;
+            text-align: center;
+            color: black;
+            padding: 0 15px;
+        }
+
+        ul.links li:nth-child(2), ul.links li:nth-child(3){
+            border-left: 2px solid #ccc;
+        }
+/* ------------------------------------------------------- */
+        
+        .product .col{
+            width: 100%;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+
+        @media screen and (min-width:376px) {
+            .product .col{
+            width: calc(100% / 3);
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+        }
+
+        .mycard{
+            width: 100%;
+            font-size: 0;
+        }
+
+        /* @media screen and (min-width:376px) {
+            .mycard{
+            width: 100%;
+            font-size: 25px;
+        }
+        } */
+
+        .title h5, .title p{
+            margin: 0;
+            font-size: 20px;
+        }
+
+        @media screen and (min-width:376px) {
+            .title h5, .title p{
+            /* margin: 0; */
+            font-size: 16px;
+        }
+        }
+
+        .card-img-wrap{
+            width: 100%;
+        }
+
+        .card-img-wrap img{
+            width: 100%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+        }
+
+        .flex-wrap{
+            flex-wrap: wrap;
+        }
+        /* ------------------------------------------ */
+        .bottom{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .title-bottom a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .title-bottom h1{
+            text-align: center;
+            border-bottom: 1px solid rgb(164, 164, 164);
+            padding-top: 30%;
+            margin:0 auto;
+        }
+        /* --------------------------------- */
+        footer{
+            width: 960px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="nav-left">
+                    <a href="#">shop</a>
+                    <a href="#">lookbook</a>
+                    <a href="#">about</a>
+                    <a href="#">contact</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="nav-middle">
+                    <h1>Alameda</h1>
+                </div>
+            </div>
+            <div class="col">
+                <div class="nav-right">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <ul class="links">
+                    <li>
+                        <a href="#">Tops</a>
+                    </li>
+                    <li><a href="#">Bottoms</a>
+                    </li>
+                    <li>
+                        <a href="#">Sale</a>
+                    </li>
+                </ul>
+            </div>
+        
+
+            <div class="row product flex-wrap">
+                <div class="col">
+                    <div class="mycard">
+                        <div class="card-img-wrap">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg" alt="">
+                        </div>
+                        <div class="title">
+                            <h5>Lounge Tunic / Black</h5>
+                            <p>$50.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="mycard">
+                        <div class="card-img-wrap">
+                            <img data-src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562797325657-XD60ODTJQ4UCZZL1J493/ulihu-blue-linen-tunic_0308-v1-FINAL-copy.jpg" data-image="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562797325657-XD60ODTJQ4UCZZL1J493/ulihu-blue-linen-tunic_0308-v1-FINAL-copy.jpg" data-image-dimensions="1600x1600" data-image-focal-point="0.5,0.5" alt="Lounge Tunic / Blue" data-load="false" class="grid-item-image
+                            grid-image-cover" style="width: 100%; height: 100%; object-position: 50% 50%; object-fit: cover;" data-parent-ratio="0.8" data-image-resolution="1000w" src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562797325657-XD60ODTJQ4UCZZL1J493/ulihu-blue-linen-tunic_0308-v1-FINAL-copy.jpg?format=1000w">
+                        </div>
+                        <div class="title">
+                            <h5>Lounge Tunic / Black</h5>
+                            <p>$50.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="mycard">
+                        <div class="card-img-wrap">
+                            <img data-src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1560522187545-N5DN8HTK8KILKUJ4P7JP/lauren-winter-natural-dress_0172-v1-FINAL-copy.jpg" data-image="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1560522187545-N5DN8HTK8KILKUJ4P7JP/lauren-winter-natural-dress_0172-v1-FINAL-copy.jpg" data-image-dimensions="1600x1600" data-image-focal-point="0.5,0.5" alt="Lounge Tunic / Cream" data-load="false" class="grid-item-image
+                            grid-image-cover" style="width: 100%; height: 100%; object-position: 50% 50%; object-fit: cover;" data-parent-ratio="0.8" data-image-resolution="500w" src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1560522187545-N5DN8HTK8KILKUJ4P7JP/lauren-winter-natural-dress_0172-v1-FINAL-copy.jpg?format=500w">
+                        </div>
+                        <div class="title">
+                            <h5>Lounge Tunic / Black</h5>
+                            <p>$50.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="mycard">
+                        <div class="card-img-wrap">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1560521860619-H5MD1F96ZD8E1O3GMRR6/lauren-winter-sonia-skirt-grey_0270-v1-FINAL-copy.jpg" alt="">
+                        </div>
+                        <div class="title">
+                            <h5>Lounge Tunic / Black</h5>
+                            <p>$50.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="mycard">
+                        <div class="card-img-wrap">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1560522400844-ZQQZO9KG459RJ59E15IR/lauren-winter-sonia-dress-terracotta_0228-v1-FINAL-copy.jpg" alt="">
+                        </div>
+                        <div class="title">
+                            <h5>Lounge Tunic / Black</h5>
+                            <p>$50.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="mycard">
+                        <div class="card-img-wrap">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1560521390690-LGUJJS4JHD4KXZ8D2EKL/lauren-winter-wide-pant-natural_0178-v1-FINAL.jpg" alt="">
+                        </div>
+                        <div class="title">
+                            <h5>Lounge Tunic / Black</h5>
+                            <p>$50.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="mycard">
+                        <div class="card-img-wrap">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1561469222494-J9J8KRSB8TI38S7MGA5T/ulihu-blue-linen-crop-top_0320-v1-FINAL-1-copy.jpg" alt="">
+                        </div>
+                        <div class="title">
+                            <h5>Lounge Tunic / Black</h5>
+                            <p>$50.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="mycard">
+                        <div class="card-img-wrap">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1560521776217-XIDGSOPYDDW8KCZ9NFNK/ulihu-blue-linen-long-short_0346-v1-FINAL-copy.jpg"alt="">
+                        </div>
+                        <div class="title">
+                            <h5>Lounge Tunic / Black</h5>
+                            <p>$50.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="mycard">
+                        <div class="card-img-wrap">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1561572497789-WUNWIPJCDCFUFD2J2VOY/kimem-long-pleated-skirt-black_0354-v1-FINAL-copy.jpg" alt="">
+                        </div>
+                        <div class="title">
+                            <h5>Lounge Tunic / Black</h5>
+                            <p>$50.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="mycard">
+                        <div class="card-img-wrap">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1561572533751-CCJKKV333MRZAQJB58QL/kimem-romy-trousers_0155-v1-FINAL-copy.jpg" alt="">
+                        </div>
+                        <div class="title">
+                            <h5>Lounge Tunic / Black</h5>
+                            <p>$50.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="mycard">
+                        <div class="card-img-wrap">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1560524204746-2X3ZGWZJOG5OJ1FVUPEV/kimem-poplin-chef-shirt-white_0304-v1-FINAL-copy.jpg" alt="">
+                        </div>
+                        <div class="title">
+                            <h5>Lounge Tunic / Black</h5>
+                            <p>$50.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <div class="title-bottom">
+                    <a href="#">
+                        <h1>SS — 20 Lookbook</h1>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <footer class="container">
+        <div class="footer">
+            <div class="media">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="email">
+                <input type="mail address" placeholder="Email Address">
+            <input type="submit" value="sign up">
+            </div>
+            <div class="down">
+                <p>Made with <a href="#">Squarespace</a> </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

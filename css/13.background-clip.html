@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            background: url(images/back1.jpg);
+            background-size: 200px;
+            border: 10px dashed rgba(204, 204, 204, 0.514);
+            padding: 20px;
+        }
+        .border{
+            background-clip: border-box;
+        }
+        .padding{
+            background-clip: padding-box;
+        }
+        .content{
+            background-clip: content-box ;
+        }
+    </style>
+</head>
+<body>
+    <div class="box border"></div>
+    <div class="box padding"></div>
+    <div class="box content"></div>
+</body>
+</html>

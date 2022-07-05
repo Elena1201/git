@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ball{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            animation: ballmove 3s ease-in-out infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+        }
+        .ball:hover{
+            animation-play-state: paused;
+        }
+        @keyframes ballmove {
+            0%{
+                transform: translate(0,0);
+                background:linear-gradient(rgb(255, 156, 156), red);
+            }
+            50%{
+                transform: translate(200px, 300px);
+                background: linear-gradient(
+                    rgb(202, 207, 143), orange
+                );
+                opacity: 50%;
+            }
+            100%{
+                transform: translate(300px, 0px);
+                background-color: rgb(244, 169, 172);
+                opacity: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ball"></div>
+</body>
+</html>

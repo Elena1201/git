@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 300px;
+            min-height: 400px;
+            background-color: antiquewhite;
+            border: 1px solid #000;
+        }
+        .img-wrap{
+            width: 100%;
+            height: 150px;
+            /* background-color: bisque; */
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.37)  40%, rgba(255, 255, 255, 0.37) 50%, rgba(0, 0, 0, 0.37) 60% ), yellow;
+            background-size: 200% 100% ;
+            background-position-x:120%;
+            animation: loading 3s infinite ;
+        }
+        @keyframes loading{
+            to{
+            background-position-x: 0% ;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="img-wrap">
+        </div>
+    </div>
+</body>
+</html>

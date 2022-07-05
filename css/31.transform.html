@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color:#aaf;
+            margin: 10px;
+            float: left;
+            transition: .5s;
+            border: 1px solid #000;
+            transform-origin: 20px 70px ;
+            
+        }
+
+        .trans1:hover {
+            transform: translateY(-50px);
+        }
+
+        .trans2:hover{
+            transform: rotate(180deg);
+        }
+
+        .trans3:hover{
+            transform: scale(1.5);
+        }
+
+        .trans4:hover{
+            transform: skewX(40deg);
+        }
+
+        .trans5:hover{
+            transform:translateX(300px) rotate(300deg) skewy(50deg);
+        }
+
+        .trans6:hover{
+            transform: matrix(1, 0, 0, 1, 100, -100);
+        }
+        
+        .trans7:hover{
+            transform: matrix(1, 2, 1, 1, 1, 1);
+        }
+
+        .box-wrapper{
+            width: 200px;
+            height: 200px;
+            border: 1px solid rgb(0, 0, 255);
+            margin: 10px;
+            float: left;
+            /* box-sizing: border-box; */
+        }
+
+        .trans8{
+            width: 200px;
+            height: 200px;
+            margin: 0;
+            background-color: cadetblue;
+            transition: .6s;
+        }
+
+        .box-wrapper:hover .trans8{
+            transform: rotate(360deg) translateX(300px);
+        /* hover下在外層的div 多重選取器 */
+        }
+    
+    </style>
+</head>
+<body>
+    <div>
+        <div class="box trans1"></div>
+        <div class="box trans2"></div>
+        <div class="box trans3"></div>
+        <div class="box trans4"></div>
+        <div class="box trans5"></div>
+        <div class="box trans6"></div>
+        <div class="box trans7"></div>
+        <div class="box-wrapper">
+            <div class="box trans8"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle{
+            stroke-dasharray: 1194;
+            /* stroke-dasharray: 1194; 切1194段 */
+            stroke-dashoffset: 1194;
+            /* stroke-dashoffset: 0; 倒轉回起始點 */
+            animation: circleani 3s linear both;
+        }
+        
+        .tick{
+            stroke-dasharray: 310 ;
+            stroke-dashoffset: 310;
+            animation: tickani 1s linear both 3s ;
+        }
+
+        @keyframes circleani {
+            from{
+                stroke-dashoffset:1194;
+            }
+            to{
+                stroke-dashoffset: 2388;
+            }
+        }
+
+        @keyframes tickani {
+            from{
+                stroke-dashoffset: 310;
+            }
+            to{
+                stroke-dashoffset: 0 ;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <svg  width="400" hright="400" viewbox="0 0 400 400">
+        <circle class="circle" cx="200" cy="200" r="190" fill="none" stroke="red" stroke-width="20" stroke-linecap="round" transform="rotate(-90 200 200)" />
+
+        <polyline class="tick" points="88,214 173,284 304,138"
+        fill="none" stroke="red" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" >
+    </svg>
+</body>
+</html>

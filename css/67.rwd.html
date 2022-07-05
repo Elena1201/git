@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 手機優先 */
+        h1{
+            color: aqua;
+        }
+        /* min-width 在螢幕尺寸大於376px 顏色做更改 */
+        @media screen and (min-width:376px) {
+            h1{
+                color: orange;
+            }
+        }
+
+        @media screen and (min-width:1536px) {
+            h1{
+                color: aquamarine;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+</body>
+</html>

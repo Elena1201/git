@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 800px;
+            height:400px;
+            background-color: rgb(122, 122, 122);
+            padding: 50px;
+            position: relative;
+        }
+        .box{
+            width: 700px;
+            height: 400px;
+            background-color: bisque;
+            /* position: relative; */
+            /* padding: 50px;
+             */
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: cadetblue;
+            float: left;
+            /* float: left; */
+            position:absolute;
+            top: -50px;
+            right: 0;
+            z-index: 0;
+            /* box1原本的位子還是會在 */
+
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: cornflowerblue;
+            float: left;
+            /* box2 會繼承父層的position */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+    </div>
+</body>
+</html>
